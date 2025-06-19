@@ -10,8 +10,8 @@ fetch('./data.json')
             <div class="card__info">
                 <img src="${card.logo}" alt="${card.name}">
                 <ul class="card__text">
-                <li id="cardTitle">${card.name}</li>
-                <li id="cardText">${card.description}</li>
+                    <li id="cardTitle">${card.name}</li>
+                    <li id="cardText">${card.description}</li>
                 </ul>
             </div>
             <div class="card__buttons">
@@ -22,10 +22,33 @@ fetch('./data.json')
                     <div class="slider"></div>
                 </div>
                 </label>
-            </div>
-            `;
+            </div> `;
 
             container.appendChild(cardElement);
             
         });
+
+        enableRemoveButton()
+
     })
+
+
+function enableRemoveButton(){
+    document.querySelectorAll('.remove__button').forEach(button =>{
+        button.addEventListener('click', () => {
+            button.closest('.card').remove()
+        })
+    })
+}
+
+function changeTheme(){
+
+    const allElements = document.querySelectorAll('body *')
+
+    allElements.forEach(element =>{
+        element.classList.toggle("darkMode")
+    })
+    
+}
+
+

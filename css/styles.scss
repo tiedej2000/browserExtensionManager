@@ -29,7 +29,11 @@ html{
 .main__wrapper{
     height: 100dvh;
     background: var(--lightGradient);
-    padding: 40px 250px;
+    padding: 20px 250px;
+
+    &.darkMode{
+        background: var(--darkGradient);
+    }
 }
 
 header{
@@ -39,6 +43,10 @@ header{
     border-radius: 15px;
     background-color: var(--neutralGrey0);
     justify-content: center;
+
+    &.darkMode{
+        background-color: var(--neutralGrey700);
+    }
 
     nav{
         height: 100%;
@@ -54,6 +62,15 @@ header{
             width: 50px;
             border-radius: 10px;
             cursor: pointer;
+            transition: all 0.3s ease;
+
+            &.darkMode{
+                background: url(../assets/images/icon-sun.svg) no-repeat center center var(--neutralGrey800) !important;
+            }
+
+            &:hover{
+                background-color: var(--neutralGrey300);
+            }
         }
     }
 }
@@ -61,11 +78,15 @@ header{
 .cards__header{
     display: flex;
     justify-content: space-between;
-    margin-top: 60px; margin-bottom: 30px;
+    margin-top: 40px; margin-bottom: 20px;
 
     h1{
         font-weight: 700;
         font-size: 2rem;
+
+        &.darkMode{
+            color: var(--neutralGrey0);
+        }
     }
 
     ul{
@@ -80,6 +101,16 @@ header{
             background-color: var(--neutralGrey0);
             border-radius: 50px;
             cursor: pointer;
+
+            &.darkMode{
+                background-color: var(--neutralGrey800);
+                color: var(--neutralGrey0);
+            }
+
+            &.active{
+                background-color: var(--red500);
+                color: var(--neutralGrey0);
+            }
         }
     }
 }
@@ -92,7 +123,7 @@ header{
     gap: 10px;
 
     .card{
-        width: 33.333%;
+        width: calc(33.333% - 6.66px);
         height: auto;
         background-color: var(--neutralGrey0);
         padding: 20px;
@@ -101,9 +132,17 @@ header{
         padding: 15px;
         border-radius: 20px;
 
+        &.darkMode{
+            background-color: var(--neutralGrey800);
+        }
+
         .card__info{
             display: flex;
             gap: 15px;
+
+            &.darkMode{
+                color: var(--neutralGrey0);
+            }
 
             img{
                 width: 60px;
@@ -129,7 +168,7 @@ header{
         }
 
         .card__buttons{
-            margin-top: 75px;
+            margin-top: 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -140,6 +179,22 @@ header{
                 border-radius: 50px;
                 font-weight: 500;
                 font-size: 0.9rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &.darkMode{
+                    color: var(--neutralGrey0);
+
+                    &:hover{
+                        color: var(--neutralGrey900);
+                    }
+                }
+
+                &:hover{
+                    color: var(--neutralGrey0);
+                    background-color: var(--red500);
+                    border-color: var(--red500);
+                }
             }
 
             .switch-container{
@@ -185,11 +240,44 @@ header{
 
                 .checkbox:checked + .switch{
                     background-color: var(--red700);
+                    
+                    &:hover{
+                        background-color: var(--red400);
+                    }
                 }
 
             }
 
         }
 
+    }
+}
+
+@media(max-width: 599px){
+    .main__wrapper{
+        padding: 20px;
+        height: auto;
+
+    }
+
+    .cards__header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        ul{
+            li{
+                padding: 10px 15px;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .cards__wrapper{
+        flex-direction: column;
+        .card{
+            width: 100%;
+        }
     }
 }

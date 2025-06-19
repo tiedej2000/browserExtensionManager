@@ -14,7 +14,7 @@
     <header>
       <nav>
         <img src="assets/images/logo.svg" alt="">
-        <div class="theme__button"></div>
+        <div class="theme__button" onclick="changeTheme()"></div>
       </nav>
     </header>
 
@@ -22,34 +22,17 @@
       <article class="cards__header">
         <h1> Extensions List</h1>
         <ul>
-          <li>All</li>
-          <li>Active</li>
-          <li>Inactive</li>
+          <li id="all" class="active">All</li>
+          <li id="active">Active</li>
+          <li id="inactive">Inactive</li>
         </ul>
       </article>
 
       <article class="cards__wrapper">
-        <div class="card">
-          <div class="card__info">
-            <img src="assets/images/logo-devlens.svg" alt="">
-            <ul class="card__text">
-              <li id="cardTitle">DevLens</li>
-              <li id="cardText">Quickly inspect page layouts and visualize element boundaries.</li>
-            </ul>
-          </div>
-          <div class="card__buttons">
-            <span class="remove__button">Remove</span>
-            <label class="switch-container">
-              <input type="checkbox" class="checkbox" />
-              <div class="switch">
-                <div class="slider"></div>
-              </div>
-            </label>
-          </div>
-        </div>
+        
       </article>
     </section>
   </main>
-  <script src=""></script>
+  <script src="./scripts/script.js"></script>
 </body>
 </html>

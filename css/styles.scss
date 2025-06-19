@@ -21,7 +21,7 @@ $font: "Noto Sans", sans-serif;
 
 
 html{
-    font-family: $font;
+    font-family: $font !important;
 }
 
 .main__wrapper{

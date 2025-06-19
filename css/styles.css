@@ -19,7 +19,7 @@ html {
 }
 
 .main__wrapper {
-  height: 100dvh;
+  height: auto;
   background: var(--lightGradient);
   padding: 20px 250px;
 }

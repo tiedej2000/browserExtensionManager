@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Browser Extension Manager</title>
+</head>
+<body>
+  <main class="main__wrapper">
+    <header>
+      <nav>
+        <img src="assets/images/logo.svg" alt="">
+        <div class="theme__button"></div>
+      </nav>
+    </header>
+
+    <section>
+      <article class="cards__header">
+        <h1> Extensions List</h1>
+        <ul>
+          <li>All</li>
+          <li>Active</li>
+          <li>Inactive</li>
+        </ul>
+      </article>
+
+      <article class="cards__wrapper">
+        <div class="card">
+          <div class="card__info">
+            <img src="assets/images/logo-devlens.svg" alt="">
+            <ul class="card__text">
+              <li id="cardTitle">DevLens</li>
+              <li id="cardText">Quickly inspect page layouts and visualize element boundaries.</li>
+            </ul>
+          </div>
+          <div class="card__buttons">
+            <span class="remove__button">Remove</span>
+            <label class="switch-container">
+              <input type="checkbox" class="checkbox" />
+              <div class="switch">
+                <div class="slider"></div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script src=""></script>
+</body>
+</html>
